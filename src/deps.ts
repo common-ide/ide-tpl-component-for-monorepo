@@ -11,14 +11,14 @@ const getUnpkgPath = (name: string, version?: string, midPath?: string, fileName
 };
 // export const BASEURL = '//dev.g.alicdn.com/lf/lf-canvas-assets/0.1.6/externaljs/';
 
-declare const __PUBLIC_PATH__: string;
 declare global {
     interface Window {
         lf[CLASSNAME]: any;
     }
 }
 
-const URL_INSTANCE_TREE = __PUBLIC_PATH__ + `index.dynamic.umd.js`;
+const __PUBLIC_PATH__ = '//dev.g.alicdn.com/lf/[NAME]/[VERSION]/';
+const URL_DYNAMIC = __PUBLIC_PATH__ + `index.dynamic.umd.js`;
 
 export const dependScripts = [
     {
@@ -91,7 +91,7 @@ export const load[CLASSNAME]FromCDN = () => {
         const { loadDependencies } = window.lf[CLASSNAME];
         return loadDependencies()
             /* STEP 1: 加载主体 index.dynamic 文件 */
-            .then(() => loadScript(URL_INSTANCE_TREE))
+            .then(() => loadScript(URL_DYNAMIC))
             .then(() => {
                 if (window.lf[CLASSNAME].load[CLASSNAME]) {
                     return window.lf[CLASSNAME].load[CLASSNAME]()

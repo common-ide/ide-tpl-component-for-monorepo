@@ -1,13 +1,21 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import [CLASSNAME], {I[CLASSNAME]Props} from '../src';
+import {[CLASSNAME], I[CLASSNAME]Props, [CLASSNAME]Factory} from '../src/index';
+
 
 storiesOf('[CLASSNAME]', module).add('default', () => {
-    const props:I[CLASSNAME]Props = {
-        visible: true
-    };
+
+    const { ComponentWithStore: [CLASSNAME]WithStore, client } = [CLASSNAME]Factory();
+
+    function onClickWithStore(value) {
+        client.put(`/model`, {
+        name: 'text',
+        value: `gggg${Math.random()}`.slice(0, 8)
+        });
+    }
+
   return <>
-        <[CLASSNAME]/>
+        <[CLASSNAME]WithStore onClick={onClickWithStore}/>
     </>
 });

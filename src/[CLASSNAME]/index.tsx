@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import { Button } from 'antd';
 import { IBaseTheme, IBaseComponentProps } from 'ide-lib-base-component';
 
 import { TComponentCurrying } from 'ide-lib-engine';
@@ -96,7 +95,7 @@ export const [CLASSNAME]Currying: TComponentCurrying<
       // ref={this.root}
       className="[NAME]-container"
     >
-      <Button onClick={onClickButton}>{text || '点我试试'}</Button>
+      <button onClick={onClickButton}>{text || '点我试试'}</button>
     [SUBCOMP_START]
       <HeaderBar {...headerBar} />
     [SUBCOMP_END]
