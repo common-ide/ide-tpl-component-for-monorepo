@@ -15,10 +15,10 @@ load[CLASSNAME]WithDeps().then((MainModule: T[CLASSNAME]) => {
 
   const { ComponentWithStore: [CLASSNAME]WithStore, client } = [CLASSNAME]Factory();
 
-  function onClick(value) {
+  function onClick(value: string) {
     console.log('当前点击：', value);
   }
-  function onClickWithStore(value) {
+  function onClickWithStore(value: string) {
     client.put(`/model`, {
       name: 'text',
       value: `gggg${Math.random()}`.slice(0, 8)
