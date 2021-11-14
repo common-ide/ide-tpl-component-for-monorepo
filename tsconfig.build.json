@@ -4,14 +4,9 @@
         "composite": true,
         "declaration": true,
         "outDir": "./dist",
-        "rootDir": "./"
+        "rootDir": "./src"
     },
     "include": [
-        "./src/**/*.ts"
-    ],
-    "awesomeTypescriptLoaderOptions": {
-        "reportFiles": [
-            "./src/**/*"
-        ]
-    }
+        "./src/**/*"
+    ]
 }
