@@ -17,6 +17,7 @@ declare global {
     }
 }
 
+declare const __PUBLIC_PATH__: string;
 // const __PUBLIC_PATH__ = '//dev.g.alicdn.com/lf/[NAME]/[VERSION]/';
 const URL_DYNAMIC = __PUBLIC_PATH__ + `index.dynamic.umd.js`;
 
