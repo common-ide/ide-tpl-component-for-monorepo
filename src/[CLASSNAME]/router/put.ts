@@ -1,4 +1,4 @@
-import Router from 'ette-router';
+import Router, { IRouter } from 'ette-router';
 import { updateStylesMiddleware, updateThemeMiddleware, buildNormalResponse, updateCStateMiddleware } from 'ide-lib-base-component';
 import { mergeWithLevel } from 'ide-lib-utils';
 
@@ -6,7 +6,7 @@ import { mergeWithLevel } from 'ide-lib-utils';
 import { IContext } from './helper';
 import { otherControlledKeyMap, mergeRule } from '../model/index';
 
-export const router = new Router();
+export const router = new Router() as IRouter;
 
 //__START:ROUTE
 // 更新单项属性

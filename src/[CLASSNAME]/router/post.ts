@@ -1,4 +1,4 @@
-import Router from 'ette-router';
+import Router, { IRouter } from 'ette-router';
 import { buildNormalResponse } from 'ide-lib-base-component';
 import { createModel } from 'ide-lib-engine';
 
@@ -6,7 +6,7 @@ import { IContext } from './helper';
 import { [CLASSNAME]Model } from '../../index';
 
 
-export const router = new Router();
+export const router = new Router() as IRouter;
 
 //__START:ROUTE
 // 创新新的 model 

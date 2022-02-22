@@ -1,10 +1,10 @@
-import Router from 'ette-router';
+import Router, { IRouter } from 'ette-router';
 import {  buildNormalResponse } from 'ide-lib-base-component';
 
 
 import { IContext } from './helper';
 
-export const router = new Router();
+export const router = new Router() as IRouter;
 //__START:ROUTE
 // 可以通过 filter 返回指定的属性值
 // 比如 /nodes?filter=name,screenId ，返回的集合只有这两个属性

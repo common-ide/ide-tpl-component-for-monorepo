@@ -3,7 +3,7 @@
   "version": "[VERSION]",
   "description": "[DESCRIPTION]",
   "main": "dist/index.umd.js",
-  "module": "dist/index.umd.js",
+  "module": "src/index.tsx",
   "idebug": "src/index.tsx",
   "typings": "dist/index.d.ts",
   "sideEffects": false,

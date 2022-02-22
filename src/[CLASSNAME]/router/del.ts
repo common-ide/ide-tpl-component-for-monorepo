@@ -1,9 +1,9 @@
-import Router from 'ette-router';
+import Router, { IRouter } from 'ette-router';
 import { buildNormalResponse } from 'ide-lib-base-component';
 
 import { IContext } from './helper';
 
-export const router = new Router();
+export const router = new Router() as IRouter;
 
 //__START:ROUTE
 // 移除操作
