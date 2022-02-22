@@ -5,7 +5,7 @@ import {
   [CLASSNAME],
   [CLASSNAME]Factory,
   I[CLASSNAME]Props
-} from '../demo/simple/main';
+} from '../src/';
 import { Client } from 'ette';
 
 
